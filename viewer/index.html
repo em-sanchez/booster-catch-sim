@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booster Catch Simulation</title>
+    <meta name="description" content="6-DOF simulation of a reusable booster caught by launch-tower arms, steered by convex powered-descent guidance." />
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="hud">
+      <div class="panel" id="telemetry">
+        <div class="phase" id="phase">Loading…</div>
+        <div class="clock" id="clock">T+ 00.0 s</div>
+        <div class="grid" id="readouts"></div>
+        <canvas id="engines" width="132" height="132" aria-label="Engine diagram"></canvas>
+      </div>
+      <div class="panel" id="picker">
+        <label for="flight">Flight</label>
+        <select id="flight"></select>
+        <div id="result"></div>
+        <div class="cams" id="cams"></div>
+        <div class="toggles">
+          <label><input type="checkbox" id="showPlan" checked /> guidance plan</label>
+          <label><input type="checkbox" id="showTrail" checked /> trail</label>
+          <label><input type="checkbox" id="showMc" /> Monte Carlo</label>
+        </div>
+      </div>
+      <div class="panel" id="mc" hidden>
+        <div class="title">Monte Carlo catch errors</div>
+        <canvas id="mcplot" width="260" height="260"></canvas>
+        <div id="mcstats"></div>
+      </div>
+      <div class="panel" id="timeline">
+        <button id="play" aria-label="Play or pause">▶</button>
+        <select id="speed" aria-label="Playback speed">
+          <option value="0.25">0.25×</option>
+          <option value="0.5">0.5×</option>
+          <option value="1" selected>1×</option>
+          <option value="2">2×</option>
+          <option value="4">4×</option>
+        </select>
+        <div class="track">
+          <input type="range" id="scrub" min="0" max="1000" value="0" step="1" aria-label="Timeline" />
+          <div id="marks"></div>
+        </div>
+        <span id="tlabel">0.0 / 0.0 s</span>
+      </div>
+      <div id="note">Simulation with estimated parameters — not real flight data. Keys: space play/pause · ←/→ seek · 1–5 cameras</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

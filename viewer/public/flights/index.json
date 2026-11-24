@@ -1,0 +1,40 @@
+{
+ "flights": [
+  {
+   "id": "nominal",
+   "name": "Nominal",
+   "description": "Calm air, nominal vehicle.",
+   "file": "flights/nominal.json",
+   "caught": true,
+   "errX": -0.4908,
+   "errY": -0.0181
+  },
+  {
+   "id": "windy",
+   "name": "Windy",
+   "description": "12 m/s onshore wind at 100 m with gusts.",
+   "file": "flights/windy.json",
+   "caught": true,
+   "errX": 0.2675,
+   "errY": -0.1649
+  },
+  {
+   "id": "dispersed-7",
+   "name": "Dispersed A",
+   "description": "Random start state, wind, thrust, Isp and aerodynamic errors.",
+   "file": "flights/dispersed-7.json",
+   "caught": true,
+   "errX": 1.1774,
+   "errY": -0.8722
+  },
+  {
+   "id": "dispersed-21",
+   "name": "Dispersed B",
+   "description": "Random start state, wind, thrust, Isp and aerodynamic errors.",
+   "file": "flights/dispersed-21.json",
+   "caught": true,
+   "errX": -0.0859,
+   "errY": 0.0447
+  }
+ ]
+}
