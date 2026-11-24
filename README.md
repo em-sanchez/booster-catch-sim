@@ -1,5 +1,7 @@
 # Booster Catch Simulation
 
+**▶ Live 3D viewer: https://em-sanchez.github.io/booster-catch-sim/**
+
 A simulation (not a game) of a large reusable rocket booster returning to its launch site and being
 caught in mid-air by two arms on the launch tower. The Python simulator flies the booster with the
 same family of steering math that real engineers have published: convex-optimization
